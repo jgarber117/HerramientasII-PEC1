@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-sans-serif;
+  background-color: lighten($color-fondo, 5%);
+  color: $color-texto;
+}
+
+a {
+  color: $color-texto;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: lighten($color-fondo, 80%);
+  text-shadow: 0 0 0.5em lighten($color-fondo, 70%);
+}
+
+// Cabecera
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: lighten($color-fondo, 5%);
+}
+
+// Sección
+.section-cabecera {
+  margin: 10px 1px 1px 1px;
+  text-align: center;
+  background-color: lighten($color-fondo, 5%);
+}
+
+.section-cuerpo {
+  padding: 10px;
+  text-align: center;
+}
+
+.titulo {
+  margin: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.subtitulo {
+  font-weight: bold;
+  background-color: lighten($color-fondo, 5%);
+}
+
+.contenedor-flexible {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+// *************************************
+// El tamaño por defecto es para móviles
+// *************************************
+
+// Agruparía los elementos en la mitad disponible (pero el dispositio no lo permite)
+.grupo-mitad {
+  width: 100%;
+  float: left;
+}
+
+// Agruparía los elementos en 1/3 del espacio disponible (pero el dispositio no lo permite)
+.grupo-tercio {
+  width: 100%;
+  float: left;
+}
+
+#header-nombre {
+  font-size: $texto-xs;
+}
+
+.header-imagen {
+  max-width: $imagen-xs;
+}
+
+.fas {
+  font-size: $fontawesome-xs;
+}
+
+// ****************************************************
+// Se definen los tamaños para el resto de dispositivos 
+// ****************************************************
+
+// Media query para tablets
+// Aumenta el tamaño del título, iconos e imagen
+@media (min-width: 580px) {
+
+  // Agrupa los elementos en la mitad disponible (porque el dispositio lo permite)
+  .grupo-mitad {
+    width: 50%;
+    float: left;
+  }
+
+  // Agruparía los elementos en 1/3 del espacio disponible (pero lo hace en la mitad)
+  .grupo-tercio {
+    width: 50%;
+    float: left;
+  }
+
+  #header-nombre {
+    font-size: $texto-sm;
+  }
+
+  .header-imagen {
+    max-width: $imagen-sm;
+  }
+
+  .fas {
+    font-size: $fontawesome-sm;
+  }
+}
+
+// Media query para escritorio
+// Aumenta aún más el tamaño del título, iconos e imagen
+@media (min-width: 800px) {
+
+  // Agrupa los elementos en la mitad disponible (porque el dispositio lo permite)
+  .grupo-mitad {
+    width: 50%;
+    float: left;
+  }
+
+  // Agrupa los elementos en 1/3 del espacio disponible (porque el dispositio lo permite)
+  .grupo-tercio {
+    width: 30%;
+    float: left;
+    padding: 1%;
+  }
+
+  #header-nombre {
+    font-size: $texto-md;
+  }
+
+  .header-imagen {
+    max-width: $imagen-md;
+  }
+
+  .fas {
+    font-size: $fontawesome-md;
+  }
+}
